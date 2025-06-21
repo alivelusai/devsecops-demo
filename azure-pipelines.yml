@@ -11,7 +11,7 @@ pool:
 
 steps:
 - script: |
-              echo "Building on  $(Build.SourcesDirectory/devsecops-demo)"
+              echo "Building on  $(Build.SourcesDirectory"
     
 
 
