@@ -14,7 +14,8 @@ steps:
               echo "Building on  $(Build.SourcesDirectory)"
 - script: |
     echo "📁 Current directory: $(Build.SourcesDirectory)"
-    ls -R - task: Npm@1
+    ls -R 
+- task: Npm@1
   inputs:
     command: 'ci'
     workingDir: '$(Build.SourcesDirectory)'
