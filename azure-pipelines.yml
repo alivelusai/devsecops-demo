@@ -12,6 +12,10 @@ pool:
 steps:
 - task: Docker@2
   inputs:
+    containerRegistry: 'devsecops'
+    repository: 'alivelusai/tictactoe'
     command: 'build'
     Dockerfile: '**/Dockerfile'
+    addPipelineData: false
+    addBaseImageData: false
 
