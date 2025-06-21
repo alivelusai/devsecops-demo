@@ -13,4 +13,4 @@ steps:
 - task: Npm@1
   inputs:
     command: 'ci'
-    workingDir: '/devsecops-demo/blob/main/'
+    workingDir: '$(Build.SourcesDirectory)/devsecops-demo/blob/main/'
