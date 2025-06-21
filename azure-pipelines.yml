@@ -14,7 +14,7 @@ steps:
   inputs:
     containerRegistry: 'devsecops'
     repository: 'alivelusai/tictactoe'
-    command: 'build'
+    command: 'buildAndPush'
     Dockerfile: '**/Dockerfile'
     addPipelineData: false
     addBaseImageData: false
