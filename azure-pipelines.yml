@@ -42,7 +42,7 @@ steps:
     sed -i "s|image: .*|image: $(NEW_IMAGE)|g" kubernetes/deployment.yaml
 
     git add kubernetes/deployment.yaml
-    git commit -m "Update Kubernetes deployment with new image tag" || echo "No changes to commit"
+    git commit -m "Update Kubernetes deployment with new image tag [skip ci]" || echo "No changes to commit"
 
     # Rebase or pull to get remote updates
     git pull --rebase origin main
