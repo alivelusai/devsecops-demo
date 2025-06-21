@@ -33,8 +33,11 @@ steps:
 - script: |
     git config user.email "alivelusainikhil@gmail.com"
     git config user.name "alivelusai"
+    git fetch origin
+    git checkout main
+    git pull origin main --rebase   # <-- Pull latest main to avoid fast-forward issues
+
     git add kubernetes/deployment.yaml
-    git commit -m "Update Kubernetes deployment with new image tag"
-    git push origin HEAD:main
+    git commit -m "Update Kubernetes deployment with new image tag" || echo "No changes to commit"
+    git push origin main
   displayName: 'Commit Updated Manifest to Repo'
-  condition: succeeded()
