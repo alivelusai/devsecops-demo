@@ -3,4 +3,5 @@ kind: Kustomization
 resources:
 - gotk-components.yaml
 - gotk-sync.yaml
-targetNamespace: default
+spec:
+ targetNamespace: default
