@@ -10,4 +10,8 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo '$(Build.SourcesDirectory)/devsecops-demo/'
+- task: Docker@2
+  inputs:
+    command: 'build'
+    Dockerfile: '**/Dockerfile'
+
