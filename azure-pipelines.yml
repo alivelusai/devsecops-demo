@@ -33,10 +33,7 @@ steps:
 - script: |
     git config user.email "alivelusainikhil@gmail.com"
     git config user.name "alivelusai"
-   
-    # Fetch and checkout main correctly
-    git fetch origin main
-    git checkout -B main origin/main
+ 
 
     echo "Updating image in deployment.yaml..."
     sed -i "s|image: .*|image: $(NEW_IMAGE)|g" kubernetes/deployment.yaml
@@ -44,8 +41,7 @@ steps:
     git add kubernetes/deployment.yaml
     git commit -m "Update Kubernetes deployment with new image tag [skip ci]" || echo "No changes to commit"
 
-    # Rebase or pull to get remote updates
-    git pull --rebase origin main
+
 
     git push origin main
   displayName: 'Update & Push Kubernetes Manifest'
