@@ -42,6 +42,6 @@ steps:
     git commit -m "Update Kubernetes deployment with new image tag [skip ci]" || echo "No changes to commit"
 
 
-
+    git pull --rebase origin main
     git push origin main
   displayName: 'Update & Push Kubernetes Manifest'
