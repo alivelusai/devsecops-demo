@@ -24,6 +24,15 @@ steps:
       app-$(Build.BuildId)
     addPipelineData: false
     addBaseImageData: false
+- script: |
+    echo "Scanning image with Trivy..."
+    trivy image \
+      --exit-code 1 \
+      --ignore-unfixed \
+      --vuln-type os,library \
+      --severity CRITICAL,HIGH \
+      $(NEW_IMAGE)
+  displayName: 'Trivy Vulnerability Scan'
 
 - script: |
     echo "Updating image in deployment.yaml..."
