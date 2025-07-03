@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: tic-tac-toe
-        image: alivelusai/tictactoe:app-315
+        image: alivelusai/tictactoe:app-338
         # Image will be automatically updated by CI/CD pipeline
         imagePullPolicy: Always
         ports:
