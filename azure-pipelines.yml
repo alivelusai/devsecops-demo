@@ -2,7 +2,7 @@ trigger:
 - main
 
 pool:
-  name: Test-agent
+  name: default
 
 variables:
   REGISTRY: 'alivelusai/tictactoe'
