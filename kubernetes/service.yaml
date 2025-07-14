@@ -5,7 +5,7 @@ metadata:
   labels:
     app: tic-tac-toe
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
   - port: 90
     targetPort: 80
